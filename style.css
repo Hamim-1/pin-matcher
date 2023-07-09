@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: aquamarine;
+    font-family: cursive;
+    user-select: none;
+    font-size: 18px;
+    outline: none;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: rgb(18, 1, 34);
+}
+section{
+    height: 60vh;
+    width: 80%;
+    padding: 2% 0;
+    display: flex;
+    justify-content: space-around;
+    margin:0 auto;
+}
+.generatebtn{
+    margin: 90px auto;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: rgb(71, 71, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid rgb(173, 67, 177);
+    cursor: pointer;
+}
+.input input{
+    border: 3px solid rgb(106, 106, 107);
+    background: rgb(85, 57, 114);
+    margin: 15px 0;
+    width: 70%;
+    height: 28px;
+}
+.row1{
+    text-align: center;
+    width: 45%;
+    margin-top: 50px;
+    background: rgb(46, 41, 58);
+    padding: 2%;
+    margin: 2%;
+    height: 100%;
+    border-radius: 10px;
+}
+.row2{
+    width: 45%;
+    text-align: center;
+    margin-top: 50px;
+    background: rgb(46, 41, 58);
+    height: 100%;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 10px;
+}
+.disit-row button{
+    width: 70px;
+    height: 70px;
+    border-radius: 9px;
+    margin: 3px;
+    padding: 5px;
+    background: transparent;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .2),-8px -8px 15px rgba(255, 255, 255, .1);
+    cursor: pointer;
+
+}
+.disit{
+    margin: 29px 0;
+}
+.row2 input{
+    border: 3px solid rgb(106, 106, 107);
+    background: rgb(85, 57, 114);
+    margin: 15px 0;
+    width: 70%;
+    height: 28px;
+}
+#submit-btn{
+    background: rgb(71, 71, 238);
+    height: 30px;
+    width: 50%;
+    border: none;
+    cursor: pointer;
+}
+#didt-match{
+    background:rgb(46, 41, 58) ;
+    color: aqua;
+    margin: 70px auto;
+    border-radius: 12px;
+    padding: 5px;
+    text-align: center;
+    width: 35%;
+    display: none;
+}
+#match{
+    background:rgb(46, 41, 58) ;
+    color: aqua;
+    margin:70px auto;
+    border-radius: 12px;
+    padding: 5px;
+    text-align: center;
+    width: 35%;
+    display: none;
+}

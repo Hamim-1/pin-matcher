@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <section>
+            <div class="row1">
+                <div class="input">
+                    <input type="text" id="pin-number">
+                </div>
+                <div class="generatebtn" onclick="pinGenerate()">
+                    Generate pin
+                </div>
+            </div>
+            <div class="row2">
+                <input type="text" id="display">
+                <div class="disit">
+                    <div class="disit-row">
+                        <button onclick="clickDisit(7)">7</button>
+                        <button onclick="clickDisit(8)">8</button>
+                        <button onclick="clickDisit(9)">9</button>
+                    </div>
+                    <div class="disit-row">
+                        <button onclick="clickDisit(4)">4</button>
+                        <button onclick="clickDisit(5)">5</button>
+                        <button onclick="clickDisit(6)">6</button>
+                    </div>
+                    <div class="disit-row">
+                        <button onclick="clickDisit(1)">1</button>
+                        <button onclick="clickDisit(2)">2</button>
+                        <button onclick="clickDisit(3)">3</button>
+                    </div>
+                    <div class="disit-row">
+                        <button onclick="deleteNumber()">Del</button>
+                        <button onclick="clickDisit(0)">0</button>
+                        <button onclick="clearAll()">C</button>
+                    </div>
+                </div>
+                <input id="submit-btn" type="button" value="Submit" onclick="pinMatch()">
+            </div>
+        </section>
+        <h3 id="didt-match">Pin did't match, please try again</h3>
+        <h3 id="match">Pin matched ... Secrect door is open</h3>
+    </header>
+    
+    <script>
+        function pinGenerate() {
+            let pin = '';
+            for (let i = 0; i < 4; i++) {
+             const randomNumber = Math.round(Math.random()*9);
+             pin += randomNumber;    
+               
+            }
+            document.getElementById('pin-number').value = pin;
+            document.getElementById('didt-match').style.display = 'none';
+            document.getElementById('match').style.display = 'none';
+            
+        }
+        function clickDisit(number) {
+            document.getElementById('display').value += number;
+        }
+        function clearAll() {
+            document.getElementById('display').value = '';
+        }
+        function deleteNumber() {
+            const pinNumber = document.getElementById('display').value;
+            document.getElementById('display').value = pinNumber.slice(0,-1);
+        }
+        function pinMatch() {
+            const pinNumber = document.getElementById('pin-number').value;
+            const pinCode = document.getElementById('display').value;
+            if(pinCode == pinNumber && pinCode != ''){
+                document.getElementById('match').style.display = 'block';
+                document.getElementById('didt-match').style.display = 'none';
+                document.getElementById('display').value = '';
+                document.getElementById('pin-number').value = '';
+            }
+            else{
+                document.getElementById('didt-match').style.display = 'block';
+                document.getElementById('match').style.display = 'none';
+                document.getElementById('display').value = '';
+                document.getElementById('pin-number').value = '';
+
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>
