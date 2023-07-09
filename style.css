@@ -2,9 +2,8 @@
     margin: 0;
     padding: 0;
     color: aquamarine;
-    font-family: cursive;
+    font:18px  fira-code;
     user-select: none;
-    font-size: 18px;
     outline: none;
 }
 header{
@@ -106,4 +105,53 @@ section{
     text-align: center;
     width: 35%;
     display: none;
+}
+@media (max-width:768px) {
+    .row1{
+        width: 30%;
+    }
+    .row2{
+        width: 70%;
+    }
+    .generatebtn{
+        height: 100px;
+        width: 100px;
+    }
+    .disit-row button{
+        width: 45px;
+        height: 45px;
+    }
+}
+@media (max-width:600px) {
+    section{
+        flex-direction: column;
+    }
+    .row1{
+        width: 80%;
+        height: 60%;
+        margin: 250px auto 0;
+        
+    }
+    .row2{
+        width: 80%;
+        margin: 10px auto;
+    }
+    .disit-row button{
+        width: 45px;
+        height: 45px;
+    }
+    .disit{
+        margin: 8px 0;
+    }
+    .generatebtn{
+        margin:50px auto ;
+    }
+    #match{
+        width: 50%;
+        margin: 230px auto;
+    }
+    #didt-match{
+        width: 50%;
+        margin: 230px auto;
+    }
 }
