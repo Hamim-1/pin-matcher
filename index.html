@@ -44,7 +44,7 @@
                 <input id="submit-btn" type="button" value="Submit" onclick="pinMatch()">
             </div>
         </section>
-        <h3 id="didt-match">Pin did't match, please try again</h3>
+        <h3 id="didt-match">Pin did't match, please try again !</h3>
         <h3 id="match">Pin matched ... Secrect door is open</h3>
     </header>
     
@@ -71,7 +71,7 @@
             const pinNumber = document.getElementById('display').value;
             document.getElementById('display').value = pinNumber.slice(0,-1);
         }
-        function pinMatch() {
+        function pinMatch(){
             const pinNumber = document.getElementById('pin-number').value;
             const pinCode = document.getElementById('display').value;
             if(pinCode == pinNumber && pinCode != ''){
