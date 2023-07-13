@@ -148,10 +148,13 @@ section{
     }
     #match{
         width: 50%;
-        margin: 230px auto;
+        margin: 235px auto;
     }
     #didt-match{
         width: 50%;
-        margin: 230px auto;
+        margin: 235px auto;
+    }
+    header{
+        height: 115vh;
     }
 }
